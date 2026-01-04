@@ -14,3 +14,14 @@ function pay() {
         "Email: " + email
     );
 }
+function processPayment() {
+    const phone = document.getElementById('user-phone').value;
+    if (!phone) {
+        alert("Будь ласка, введіть телефон!");
+        return;
+    }
+    
+    alert("Дякуємо! Оплата успішна.");
+    localStorage.removeItem('eloriaCart'); // Це очищує кошик
+    window.location.href = "index.html"; // Повернення на головну
+}
