@@ -1,0 +1,71 @@
+
+
+body {
+    margin: 0;
+    background: #f4f4f4; /* М'якший сірий */
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.container {
+    width: 95%;
+    max-width: 600px; /* Зменшено для кращого фокусу на формі */
+    min-height: 450px;
+    background: white;
+    margin: 50px auto;
+    border-radius: 8px; /* Додано заокруглення */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden; /* Щоб хедер не виходив за межі радіуса */
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: black;
+    color: white;
+    padding: 20px;
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.form {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column; /* Інпути один під одним — це зручніше */
+    gap: 20px; /* Відстань між інпутами */
+    align-items: center;
+}
+
+.form input {
+    padding: 12px 15px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.form input:focus {
+    border-color: black;
+    outline: none;
+}
+
+.pay-btn {
+    align-self: center; /* Центруємо кнопку */
+    margin: 20px 0 40px 0;
+    background: black; /* Змінено з червоного на чорний для стилю ElOria */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.pay-btn:hover {
+    background: #333;
+    transform: translateY(-2px); /* Легкий ефект підстрибування */
+}
