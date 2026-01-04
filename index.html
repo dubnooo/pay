@@ -2,23 +2,34 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Оплата</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата - ElOria</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <div class="header">🤍 Обране</div>
+<div class="container" style="max-width: 500px; margin: 50px auto;">
+    <header>
+        <a href="index.html" style="color: black; text-decoration: none;">← Назад</a>
+        <div class="header-title">Ваше замовлення</div>
+    </header>
 
-    <div class="form">
-        <input type="tel" placeholder="Ваш номер телефону" id="phone">
-        <input type="email" placeholder="Ведіть свою електронну пошту" id="email">
-        <input type="password" placeholder="Пароль" id="password">
+    <div id="cart-items-display" style="padding: 20px;">
+        </div>
+
+    <div id="total-price-display" style="padding: 0 20px 20px; font-weight: bold; font-size: 20px; text-align: right;">
+        Разом: 0 ₴
     </div>
 
-    <button class="pay-btn" onclick="pay()">Сплатити все</button>
+    <div class="form" style="padding: 0 20px; display: flex; flex-direction: column; gap: 10px;">
+        <input type="tel" id="user-phone" placeholder="Ваш номер телефону" required style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;">
+        <input type="email" id="user-email" placeholder="Ваша електронна пошта" style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;">
+        
+        <button class="buy-btn" onclick="processPayment()" style="width: 100%; background: black; color: white; padding: 15px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; margin-top: 10px;">
+            Підтвердити та сплатити
+        </button>
+    </div>
 </div>
-    <button class="buy-btn" onclick="processPayment()">Оплатити замовлення</button>
 
 <script src="script.js"></script>
 </body>
